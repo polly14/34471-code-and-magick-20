@@ -12,11 +12,7 @@ var similarWizardTemplate = document.querySelector('#similar-wizard-template')
   .querySelector('.setup-similar-item');
 
 var getRandomFromArr = function (arr) {
-  var num = 10;
-  if (arr.length > num) {
-    num *= 2;
-  }
-  var random = Math.random().toFixed(1) * num;
+  var random = Math.random().toFixed(1) * 10;
   if (random > arr.length - 1) {
     random = (random / arr.length).toFixed(0);
   }

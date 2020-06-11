@@ -84,7 +84,7 @@ var getNewColor = function (colors) {
 var changeColor = function (colors, element, input) {
   var color = getNewColor(colors)[0];
   element.style.fill = color;
-  input.value = color;
+  input[0].value = color;
 };
 wizardCoat.addEventListener('click', function () {
   changeColor(COAT_COLOR, wizardCoat, inputCoat);
@@ -95,7 +95,7 @@ wizardEyes.addEventListener('click', function () {
 setupFireball.addEventListener('click', function () {
   var color = getNewColor(FIREBALL_COLOR)[0];
   setupFireball.style.background = color;
-  inputFireball.value = color;
+  inputFireball[0].value = color;
 });
 
 

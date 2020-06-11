@@ -17,9 +17,9 @@ var setupPlayer = setup.querySelector('.setup-player');
 var setupFireball = setupPlayer.querySelector('.setup-fireball-wrap');
 var wizardCoat = setupPlayer.querySelector('.wizard-coat');
 var wizardEyes = setupPlayer.querySelector('.wizard-eyes');
-var inputCoat = document.getElementsByName('coat-color');
-var inputEyes = document.getElementsByName('eyes-color');
-var inputFireball = document.getElementsByName('fireball-color');
+var inputCoat = document.querySelector('[name="coat-color"]');
+var inputEyes = document.querySelector('[name="eyes-color"]');
+var inputFireball = document.querySelector('[name="fireball-color"]');
 
 var getRandomFromArr = function (arr) {
   var random = Math.random().toFixed(1) * 10;
@@ -84,7 +84,7 @@ var getNewColor = function (colors) {
 var changeColor = function (colors, element, input) {
   var color = getNewColor(colors)[0];
   element.style.fill = color;
-  input[0].value = color;
+  input.value = color;
 };
 wizardCoat.addEventListener('click', function () {
   changeColor(COAT_COLOR, wizardCoat, inputCoat);
@@ -95,7 +95,7 @@ wizardEyes.addEventListener('click', function () {
 setupFireball.addEventListener('click', function () {
   var color = getNewColor(FIREBALL_COLOR)[0];
   setupFireball.style.background = color;
-  inputFireball[0].value = color;
+  inputFireball.value = color;
 });
 
 
